@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body { overflow-x: hidden; }
+body { @apply bg-paper text-ink font-body text-[17px] leading-[1.75]; }
+  :focus-visible { outline: 3px solid #16181D; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+}
+
+@layer components {
+  .display { font-family: Archivo, sans-serif; font-stretch: 125%; font-weight: 800; line-height: 1.1; letter-spacing: -0.01em; }
+  .grid-paper {
+    background-image: linear-gradient(rgba(22,24,29,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(22,24,29,.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
